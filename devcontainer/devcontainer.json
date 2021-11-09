@@ -1,0 +1,7 @@
+{
+    // https://code.visualstudio.com/docs/remote/devcontainerjson-reference
+    "dockerComposeFile": "./docker-compose.yaml",
+    "service": "devenvironment",
+    "runServices": ["devenvironment"],
+    "workspaceFolder": "/workspace"
+}

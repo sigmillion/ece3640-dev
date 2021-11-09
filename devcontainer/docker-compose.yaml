@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  devenvironment:
+    build:
+      context: ..
+      dockerfile: ./.devcontainer/dockerfile
+    volumes:
+      - type: bind
+        source: ..
+        target: /workspace
+    # command: ["/bin/bash", "-c", "echo run with new command"]

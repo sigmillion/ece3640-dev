@@ -1,0 +1,15 @@
+FROM python:3
+
+RUN apt-get update && apt-get install -y \
+    gcc \
+    vim \
+    emacs \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip install numpy matplotlib
+
+#COPY requirements.txt /requirements.txt
+#RUN pip install -r /requirements.txt
+#RUN rm /requirements.txt
+
+CMD  [ "/bin/bash", "-c", "echo 'started in dev mode sleeping'; while sleep 1000; do :; done" ]
